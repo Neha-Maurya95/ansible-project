@@ -1,0 +1,7 @@
+---
+- name: "Playing with Ansible"
+  hosts: ubuntu_vms
+  become: yes
+  tasks:
+    - name: install nginx
+      apt: name=nginx state=latest
