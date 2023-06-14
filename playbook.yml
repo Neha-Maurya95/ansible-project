@@ -3,5 +3,5 @@
   hosts: ubuntu_vms
   become: yes
   tasks:
-    - name: install nginx
+    - name: install nginx latest
       apt: name=nginx state=latest
