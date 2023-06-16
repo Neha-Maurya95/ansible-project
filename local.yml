@@ -2,6 +2,12 @@
   hosts: localhost
   gather_facts: no
   tasks:
+    - name: display git key file
+      debug:
+        msg: "{{ secret_key }}"
+    - name: display git key
+      debug:
+        msg: "{{ lookup('file', secret_key) }}"
 
     - name: DISPLAY THE INJECTED EXTRA VAR
       debug:
