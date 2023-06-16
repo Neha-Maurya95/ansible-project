@@ -5,3 +5,7 @@
   tasks:
     - name: install nginx latest
       apt: name=nginx state=latest
+    - name: DISPLAY THE INJECTED EXTRA VAR
+      debug:
+        var: secret_key
+      
